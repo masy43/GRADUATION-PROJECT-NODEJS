@@ -1,6 +1,6 @@
 # BeautyMate Backend
 
-Welcome to the backend repository of BeautyMate, an innovative skincare and beauty application aimed at transforming how individuals engage with skincare products. This repository contains the backend codebase developed using Node.js, Prisma, and PostgreSQL.
+Welcome to the backend repository of BeautyMate, an innovative skincare and beauty application aimed at transforming how individuals engage with skincare products. This backend is written in TypeScript (Node.js + Express), and uses Prisma with PostgreSQL.
 
 ## About BeautyMate
 
@@ -17,6 +17,7 @@ BeautyMate stands at the forefront of innovation in the skincare and beauty doma
 ## Technologies Used
 
 - **Node.js**: Backend server environment
+- **TypeScript**: Static typing + safer refactors
 - **Prisma**: ORM (Object-Relational Mapping) for database interaction
 - **PostgreSQL**: Relational database management system
 - **Flutter**: Framework for cross-platform mobile app development
@@ -28,12 +29,19 @@ BeautyMate stands at the forefront of innovation in the skincare and beauty doma
 To get started with the BeautyMate backend:
 
 1. Clone this repository to your local machine.
-2. Install Node.js if you haven't already.
-3. Install Prisma CLI globally using `npm install prisma -g`.
-4. Set up your PostgreSQL database and update the connection string in the `prisma/schema.prisma` file.
-5. Run `npm install` to install project dependencies.
-6. Run `npx prisma migrate dev` to apply database migrations.
-7. Run `npm start` to start the backend server.
+2. Install Node.js (LTS recommended).
+3. Create a `.env` file (example values you likely need: `DATABASE_URL`, `JWT_SECRET`, `JWT_EXPIRES_IN`, `PORT`).
+4. Run `npm install`.
+5. Run `npm run prisma:migrate` to apply database migrations.
+
+### Run (development)
+
+- `npm run dev`
+
+### Run (production-like)
+
+- `npm run build`
+- `npm start`
 
 ## Contributing
 
